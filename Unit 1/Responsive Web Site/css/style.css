@@ -124,38 +124,55 @@ h2{
     font-size: 30px
 }
 
-/* Section-A */
-#section-a{
-    margin-right: 0;
+/* Section A */
+
+#section-a h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+    text-decoration: underline;
+    font: 200;
+    color: antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#section-a .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    
 }
 
 #section-a .box {
-    background-color: blueviolet;
-    display: inline-block;
-    width: 31%;
-    padding: 10px;
-    margin-right: 0;
+    background-color:antiquewhite;
     text-align: center;
+    margin: 30px;
 }
 
-#section-a .box img {
+#section-a .box:nth-child(5){
+    background-color: skyblue;
+}
+
+#section-a .box:nth-child(5) img{
+    height: 200px;
+    width: 200px;
+    margin-top: 14px;
+}
+
+
+
+#section-a .box img{
     width: 10%;
-}
-
-#section-a .box:nth-of-type(2) {
-    background-color:cyan;
-}
-
-#section-a .box:nth-of-type(3){
-    background-color: lightblue;
 }
 /* Footer */
 
-#main-footer {
+#main-footer{
     padding: 1em;
     margin: 0;
     background: darkgreen;
     color: #fff;
     text-align: center;
     line-height: 30px;
+}
+
+#main-footer a{
+    color: white;
 }
