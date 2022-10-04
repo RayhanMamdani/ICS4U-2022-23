@@ -6,37 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Worth of the Earth</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Icons for social media -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <!-- Title  -->
     <header id="main-header">
         <div class="container">
-            <h1 id="title"> The Worth of the Earth</h1>
-            <h2 id="subtext">Know your planet</h1>
+            <h1 id="title">THE WORTH OF THE EARTH</h1>
         </div>
     </header>
-
+    <!-- Navigation Bar -->
     <nav id="navbar">
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger"/>
         <div class="container">
             <ul>
-                <li><a href="#" id="currentpage">Home</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Donate</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="index.html" id="currentpage">Home</a></li> 
+                <!-- ^ current page different colour -->
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="team.html">Our Team</a></li>
             </ul>
         </div>
     </nav>
-
+    <!-- Subscribe Showcase -->
     <section id="showcase">
         <div class="showcaseimg"></div>
         <div class="container">
-            <h2>Subscribe to our newsletter!</h2>
-            <button id="move-subscribe"><a href="#main-footer">Subscribe</a></button>
+            <h2>Know your planet | Love your planet</h2>
+            <!-- Creates new page with form (5th page) -->
+            <button id="move-subscribe"><a href="subscribe.html" target="_blank">Subscribe</a></button>
         </div>
     </section>
 
+    <!-- Different boxes with images downloaded with sample text (x8)-->
     <section id="section-a">
-        <h1>Issues in the planet</h1>
+        <h1>Issues in the environment</h1>
         <div class="container">
             <div class="box">
                 <img src="./images/pollution.png">
@@ -58,52 +64,60 @@
                 perspiciatis blanditiis?</p>
             </div>
             <div class="box">
-                <img src="./images/litter.png">
-                <h3>Litter</h3>
+                <img src="./images/plastic.png">
+                <h3>Plastics</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non explicabo, et tempore consequuntur molestiae
                     asperiores
                     error exercitationem, magnam ab harum odio praesentium culpa beatae molestias, cupiditate tempora necessitatibus
                     perspiciatis blanditiis?</p>
             </div>
+            <!-- Image in center -->
             <div class="box">
                 <img src="images/world.png"></img>
             </div>
             <div class="box">
-                <img src="./images/litter.png">
-                <h3>Litter</h3>
+                <img src="./images/soil-erosion.png">
+                <h3>Soil Erosion</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non explicabo, et tempore consequuntur molestiae
                     asperiores
                     error exercitationem, magnam ab harum odio praesentium culpa beatae molestias, cupiditate tempora necessitatibus
                     perspiciatis blanditiis?</p>
             </div>
             <div class="box">
-                <img src="./images/litter.png">
-                <h3>Litter</h3>
+                <img src="./images/acid-rain.png">
+                <h3>Acid Rain</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non explicabo, et tempore consequuntur molestiae
                     asperiores
                     error exercitationem, magnam ab harum odio praesentium culpa beatae molestias, cupiditate tempora necessitatibus
                     perspiciatis blanditiis?</p>
             </div>
             <div class="box">
-                <img src="./images/litter.png">
-                <h3>Litter</h3>
+                <img src="./images/glacier.png">
+                <h3>Glaciers</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non explicabo, et tempore consequuntur molestiae
                     asperiores
                     error exercitationem, magnam ab harum odio praesentium culpa beatae molestias, cupiditate tempora necessitatibus
                     perspiciatis blanditiis?</p>
             </div>
             <div class="box">
-                <img src="./images/litter.png">
-                <h3>Litter</h3>
+                <img src="./images/panda.png">
+                <h3>Endangered Species</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non explicabo, et tempore consequuntur molestiae
                     asperiores
                     error exercitationem, magnam ab harum odio praesentium culpa beatae molestias, cupiditate tempora necessitatibus
                     perspiciatis blanditiis?</p>
             </div>
         </div>
+    </section>
 
-    <footer id="main-footer" class="grid">
-        <div> <a href="">Terms of Service</a>    |  <a href="">Privacy Policy</a>   |  <a href="">Accesibility</a> </div><br>
+    <!-- Footer with social media -->
+    <footer id="main-footer">
+        <div> <a href="">Terms of Service</a>    |  <a href="">Privacy Policy</a>   |  <a href="">Accesibility</a> </div>
+        <a href="https://www.instagram.com" target="_blank" class="fa fa-instagram"></a>
+        <a href="https://www.twitter.com" target="_blank" class="fa fa-twitter"></a>
+        <a href="https://www.youtube.com" target="_blank" class="fa fa-youtube-play"></a>
+        <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+        <br>
         <div>The Worth of the Earth</div>
         <div>Project by Carl Gustav<br>Copyright &copy; 2022</div>
     </footer>

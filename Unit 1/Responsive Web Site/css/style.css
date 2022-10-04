@@ -1,52 +1,60 @@
+/* Imports a google font that is used by the font family key */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&family=Montserrat:wght@300&display=swap');
+
+/* Default characteristics of the website */
 body{
-    background-color: #03a9f4;
+    background-color: #A6DADF;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Gets rid of default margin */
 h1{
     margin: 0;
 }
 
-h2{
-    letter-spacing: 1.5px;
-}
-
+/* Elements wrapped in a container div take up 100% width and anything outside is hidden */
 .container{
     width: 100%;
     margin: 0;
     overflow: hidden;
+    height: fit-content;
 }
 
-/* Header */
+                                            /* Header */
+/* Styles title */
 #main-header{
-    background-color: #22DD34;
-    height: 200px;
+    background-color: #9ED597;
+    height: fit-content;
     color: white;
+    font-weight: 900;
     font-size: 30px;
-    font-family: fantasy;
+    font-family: Catamaran;
+    padding: 20px;
 }
 
 #main-header .container{
-    min-height: 300px;
     text-align: center;
     padding: 0;
-    margin-top: 20;
 }
 
-#subtext{
-    margin-top: 50px;
-    font-size: 30px;
+                                            /* Navbar */
+/* Span across page */
+#navbar{
+    width: 100%;
 }
 
-
-/* Navbar */
+/* Styles nav */
 #navbar .container{
-    background-color: darkgreen;
+    /* #BEDABA */
+    background-color:#9ED597;
     min-height: 50px;
+    border-top: 4px solid #BEDABA;
 }
 
+/* Styles content on nav */
 #navbar .container ul{
     margin: 0;
     padding: 0;
@@ -57,11 +65,11 @@ h2{
 }
 
 #navbar .container li{
-    width: 300px;
-    padding: 30px;
+    width: 350px;
+    padding: 25px;
 }
 
-
+/* Styles links on nav */
 #navbar a{
     color: white;
     text-decoration: none;
@@ -71,20 +79,27 @@ h2{
     flex-wrap: wrap;
 }
 
+/* When you hover over link */
 #navbar a:hover{
-    border: 1px solid;
-    border-color: white;
+    text-decoration: underline;
 }
 
 #navbar a#currentpage{
     color: #03a9f4;
 }
 
+/* Doesnt appear until media query */
+#navbar label, #hamburger{
+    display: none;
+}
+
 /* Showcase */
 #showcase{
     min-height: 300px;
+    height: fit-content;
 }
 
+/* Styles image separately */
 #showcase .showcaseimg{
     position: absolute;
     background-image: url('../images/showcase.jpg');
@@ -94,80 +109,288 @@ h2{
     width: 100%;
     height: 300px;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 #showcase h2{
     text-align: center;
-    color: #00008B;
-    font-weight: 800;
+    color: #0C69D3;
+    font-weight: 900;
     font-size: 40px;
 }
 
+/* Styles Subscribe button */
 #showcase #move-subscribe{
-    /* background-color:#22DD34;
-    border: white 1px solid;
-    text-decoration: none; */
     display: flex;
-    background: #00008B;
+    background: #0C69D3;
     padding: 1em 2em;
     border: 0px;
-    border-radius: 10px;
+    border-radius: 15px;
     margin: auto;
     margin-top: 40px;
 }
 
-
+/* Style Subscribe link */
 #showcase #move-subscribe a{
     text-decoration: none;
     color: white;
     font-size: 30px
 }
 
-/* Section A */
-
+                                            /* Section A */
+/* Styles header text */
 #section-a h1{
     text-align: center;
     margin-top: 20px;
-    font-size: 40px;
-    text-decoration: underline;
+    font-size: 50px;
     font: 200;
-    color: antiquewhite;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
 }
-
+/* Creates grid */
 #section-a .container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);    
 }
-
+/* Styles boxes */
 #section-a .box {
-    background-color:antiquewhite;
+    background-color:white;
     text-align: center;
     margin: 30px;
+    height: 300px;
+    border-radius: 15px;
 }
-
+/* Special World Image */
 #section-a .box:nth-child(5){
-    background-color: skyblue;
+    background-color: #A6DADF;
 }
-
+/* Special Stylization */
 #section-a .box:nth-child(5) img{
     height: 200px;
     width: 200px;
-    margin-top: 14px;
+    margin-top: 50px;
 }
 
-
-
+#section-a .box p{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/* Image icon */
 #section-a .box img{
     width: 10%;
+    margin-top: 5%;
 }
-/* Footer */
 
+                                            /* Section B */
+#section-b{
+    padding: 30px;
+}
+
+/* Styles Mission Statement */
+#section-b .mission-statement{
+    margin: auto;
+    padding-bottom: 20px;
+    width: 70%;
+    text-align: center;
+    color: darkcyan;
+}
+
+#section-b .mission-statement h1{
+    font-size: 50px;
+}
+
+#section-b .mission-statement p{
+    font-size: 30px;
+}
+
+/* Creates side by side header and passage */
+#section-b .box{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* border: 1px solid #0C69D3; */
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+#section-b .box h1{
+    width: 40%;
+    padding: 3%;
+    font-weight: 1000;
+    font-size: 39px;
+    text-align: center;
+    color: darkcyan;
+}
+
+#section-b .box p{
+    /* color: #A6DADF; */
+    color: black;
+    font-weight: 580;
+    padding: 5%;
+    margin: 0;
+    width: 100%;
+    /* background-color: #0C69D3; */
+    background-color: white;
+    text-align: center;
+    border-radius: 15px;
+    line-height: 30px;
+    font-weight: 100;
+}
+
+/* List for Values */
+#section-b .box ul{
+    /* color: #A6DADF; */
+    color: black;
+    font-weight: 580;
+    padding: 2% 5% 2% 5%;
+    margin: 0;
+    list-style: none;
+    /* background-color: #0C69D3; */
+    background-color: white;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    font-weight: 100;
+}
+/* Specific Value word bolded */
+#section-b .box ul li a{
+    font-weight: bold;
+    font-size: 23px;
+}
+
+                                            /* Section C */
+
+#section-c{
+    padding: 30px;
+}
+
+/* Styles each box */
+#section-c .box{
+    padding: 10px;
+    background-color: white;
+    color: darkcyan;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* Header of each box */
+#section-c .box h1{
+    font-size: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: whitesmoke;
+
+}
+
+/* Events in two columns */
+#section-c .box ul{
+    columns: 2;
+    text-align: start;
+}
+
+#section-c .box li{
+    list-style: none;
+    font-size: 20px;
+    line-height: 200%;
+}
+
+#section-c .box li h2{
+    text-align: center;
+    height: 48px;
+}
+
+#section-c .box h3{
+    text-align: center;
+}
+
+#section-c #upcoming{
+    margin-bottom: 40px;
+}
+
+/* Side by Side featured events */
+#section-c #eventflex{
+    display: flex;
+    line-height: 24px;
+    padding-top: 10px;
+}
+
+#section-c #eventflex div{
+    padding: 0 30px 0 30px;
+}
+
+/* Line in between */
+#section-c #eventflex #first{
+    border-right: solid 1px darkcyan;
+}
+
+                                            /* Section D*/
+#section-d{
+    padding: 30px
+}
+
+/* Grid of each team member */
+#section-d .team-members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Styles each box */
+#section-d .box {
+    width: 90%;
+    height: 520px;
+    margin: auto;
+    text-align: center;
+    background-color: darkcyan;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+/* Image within each box */
+#section-d .team-members .box img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+#section-d .team-members .box h1{
+    padding: 3%;
+    font-family: Catamaran;
+    font-size: 35px;
+}
+
+                                            /* Subscribe Form */
+/* Styles form */
+#subscribe-form{
+    border: 5px solid darkcyan;
+    background-color: white;
+    color: darkcyan;
+    margin: auto; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 500px;
+    padding: 30px;
+}
+
+/* Styles subscribe button */
+#subscribe-form #subscribe{
+    border: none;
+    background-color: darkcyan;
+    color: white;
+    padding: 10px;
+}
+
+#subscribe-form input{
+    display: block;
+}
+
+                                            /* Footer */
+/* Styles footer on bottom */
 #main-footer{
     padding: 1em;
     margin: 0;
-    background: darkgreen;
+    background: #9ED597;
     color: #fff;
     text-align: center;
     line-height: 30px;
@@ -175,4 +398,125 @@ h2{
 
 #main-footer a{
     color: white;
+}
+/* Icons have no underline */
+#main-footer .fa{
+    text-decoration: none;
+}
+
+@media(max-width:1024px){
+    /* Links in navbar hamburger menu */
+    #navbar .container li a{
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-right: 1px solid darkcyan;
+        border-left: 1px solid darkcyan;
+    }
+    
+    #navbar .container li{
+        margin: auto;
+    }
+
+    /* Styles hamburger icon */
+    #navbar label{
+        display: inline-block;
+        color: white;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    /* Gets rid of previous navbar */
+    #navbar .container{
+        display: none;
+    }
+
+    /* Lines the new navbar */
+    #navbar ul{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Toggles hamburger menu  */
+    #navbar input:checked ~ .container{
+        display: block;
+    }
+}
+
+@media(max-width:900px){
+    /* Switches from 3 colums -> 2 columns */
+    #section-a .container{
+        grid-template-columns: repeat(2, 1fr);
+    } 
+
+    /* Gets rid of earth image in center of prev grid */
+    #section-a .box:nth-child(5){
+        display: none;
+    }
+
+    /* Switches from 3 colums -> 2 columns */
+    #section-d .team-members{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media(max-width:600px){
+    /* Switches from 2 columns -> 1 column */
+    #section-a .container{
+        grid-template-columns: 1fr;
+        margin: auto;
+    } 
+
+    #section-a .box{
+        padding: 0 40px 0 40px;
+    }
+
+    /* Orders vertically*/
+    #section-b .box{
+        flex-direction: column;   
+    }
+    
+    #section-b .box h1{
+        width: 100%;
+        padding: 20px 0 20px 0;
+    }
+    
+    #section-b .box p, #section-b .box ul{
+        padding: 10px;
+    }
+
+    /* Flips the order to be consistent with others */
+    #section-b #what-we-do .box{
+        flex-direction: column-reverse;
+    }
+
+    /* Switches from 2 colums -> 1 column */
+    #section-d .team-members{
+        grid-template-columns: 1fr;
+    }
+
+    
+    #section-d .team-members img{
+        max-height: 300px;
+    }
+}
+
+@media(max-width:750px){
+    /* Events go in one category */
+    #section-c .box ul{
+        columns: 1;
+    }
+
+    #section-c #eventflex{
+        flex-direction: column-reverse;
+    }
+
+    /* Switch border vertical -> horizontal */
+    #section-c #eventflex #first{
+        border-right: 0px;
+        border-top: solid 1px darkcyan;
+    }
 }
