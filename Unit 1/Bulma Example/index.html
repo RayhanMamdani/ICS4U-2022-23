@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Bulma Cheat Sheet</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" />
+</head>
+
+<body>
+	<!-- Style is removed from all the elements -->
+	<h1>Header 1</h1>
+	<h2>Header 2</h2>
+	<h3>Header 3</h3>
+
+	<br />
+
+	<span class="icon has-text-info">
+		<i class="fa-solid fa-baseball fa-lg"></i>
+	</span>
+
+	<br />
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, veniam ad
+		consequuntur fugit, officiis tempore mollitia libero odio deleniti laborum
+		recusandae facere? Ab totam recusandae voluptatem nobis minima molestiae
+		eum.
+	</p>
+
+	<br />
+
+	<h1 class="button is-danger">Test</h1>
+	<button>Test</button>
+
+	<!-- From Bulma -->
+	<button class="button is-primary">Button</button>
+	<button class="button is-link">Button</button>
+	<button class="button is-info">Button</button>
+	<button class="button is-success">Button</button>
+	<button class="button is-warning">Button</button>
+	<button class="button is-danger">Button</button>
+
+	<button class="button is-small">Button</button>
+	<button class="button">Button</button>
+	<button class="button is-medium">Button</button>
+	<button class="button is-large">Button</button>
+
+	<button class="button is-primary is-outlined">Button</button>
+	<button class="button is-loading">Button</button>
+	<button class="button" disabled>Button</button>
+
+	<div class="container">
+		<div class="columns is-tablet is-multiline">
+			<div class="column">
+				<p class="is-primary notification">Column 1</p>
+			</div>
+			<div class="column is-three-quarters">
+				<p class="is-danger notification">Column 2</p>
+			</div>
+			<div class="column is-2">
+				<p class="is-success notification">Column 3</p>
+			</div>
+			<div class="column">
+				<p class="is-primary notification">Column 4</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="field">
+			<label class="label">Name</label>
+			<div class="control">
+				<input class="input" type="text" placeholder="Text input">
+			</div>
+		</div>
+
+		<div class="field">
+			<label class="label">Username</label>
+			<div class="control has-icons-left has-icons-right">
+				<input class="input is-success" type="text" placeholder="Text input" value="bulma">
+				<span class="icon is-small is-left">
+					<i class="fas fa-user"></i>
+				</span>
+				<span class="icon is-small is-right">
+					<i class="fas fa-check"></i>
+				</span>
+			</div>
+			<p class="help is-success">This username is available</p>
+		</div>
+
+		<div class="field">
+			<label class="label">Email</label>
+			<div class="control has-icons-left has-icons-right">
+				<input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+				<span class="icon is-small is-left">
+					<i class="fas fa-envelope"></i>
+				</span>
+				<span class="icon is-small is-right">
+					<i class="fas fa-exclamation-triangle"></i>
+				</span>
+			</div>
+			<p class="help is-danger">This email is invalid</p>
+		</div>
+
+		<div class="field">
+			<label class="label">Subject</label>
+			<div class="control">
+				<div class="select">
+					<select>
+						<option>Select dropdown</option>
+						<option>With options</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="field">
+			<label class="label">Message</label>
+			<div class="control">
+				<textarea class="textarea" placeholder="Textarea"></textarea>
+			</div>
+		</div>
+
+		<div class="field">
+			<div class="control">
+				<label class="checkbox">
+					<input type="checkbox">
+					I agree to the <a href="#">terms and conditions</a>
+				</label>
+			</div>
+		</div>
+
+		<div class="field">
+			<div class="control">
+				<label class="radio">
+					<input type="radio" name="question">
+					Yes
+				</label>
+				<label class="radio">
+					<input type="radio" name="question">
+					No
+				</label>
+			</div>
+		</div>
+
+		<div class="field is-grouped">
+			<div class="control">
+				<button class="button is-link">Submit</button>
+			</div>
+			<div class="control">
+				<button class="button is-link is-light">Cancel</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<section class="hero">
+			<div class="hero-body has-background-light">
+				<p class="title has-text-success">Hero title</p>
+				<p class="subtitle has-text-dark">Hero subtitle</p>
+			</div>
+		</section>
+
+		<br />
+
+		<section class="section is-medium has-background-dark">
+			<h1 class="title has-text-white">Medium section</h1>
+			<h2 class="subtitle has-text-grey-light">
+				A simple container to divide your page into sections, like the one
+				you're currently reading.
+			</h2>
+		</section>
+
+		<footer class="footer">
+			<div class="content has-text-centered">
+				<p>
+					<strong>Bulma</strong> by
+					<a href="https://jgthms.com">Jeremy Thomas</a>. The source code is
+					licensed
+					<a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+					The website content is licensed
+					<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+				</p>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
