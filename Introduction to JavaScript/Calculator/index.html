@@ -70,9 +70,18 @@
 
     function solve() {
         const textInput = arguments[0];
-        const opIndex = operatorIndex(textInput)
-        console.log(opIndex)
+        // const opIndex = operatorIndex(textInput)
+        // if (textInput.substring('' + textInput) === "+"){
+        //     return
+        // }
+        try {
+            return
+        } catch (error) {
+
+        }
     }
+
+
 
     keypadNumbers.forEach(row => {
         row.forEach(num => {
@@ -91,7 +100,12 @@
                 if (num === 'CLS') {
                     resultBox.textContent = '';
                 } else if (num === '=') {
-                    solve(resultBox.textContent);
+                    try {
+                        resultBox.textContent = eval(resultBox.textContent);
+                    } catch (error) {
+                        resultBox.textContent = "ERROR"
+                    }
+
                 } else {
                     resultBox.textContent += num;
                 }
