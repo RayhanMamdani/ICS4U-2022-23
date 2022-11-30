@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Past Games</title>
+</head>
+
+
+<body>
+    <nav class="navbar has-background-grey-lighter" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="images/nbalogo.png">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="index.html">
+                    Standings
+                </a>
+
+                <a class="navbar-item" href="pastgames.html">
+                    Past Games
+                </a>
+
+                <a class="navbar-item" href="addgame.html">
+                    Add Game
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="message-body is-danger" id="dangerAlert">
+    </div>
+    <div class="container card" id="dateFilter">
+        <h1>Select a date range:</h1>
+        <input type="date" name="" id="startDate" style="display: inline;">
+        <p style="display: inline;"> - </p>
+        <input type="date" name="" id="endDate" style="display: inline;">
+        <button class="button" id='filterButton' onclick="filter()">Filter</button>
+    </div>
+    <div style="margin-top: 5%; margin: auto" class="container columns" id="gamesContainer">
+        <div class="column" id="column1"></div>
+        <div class="column" id="column2"></div>
+        <div class="column" id="column3"></div>
+    </div>
+
+    <div class="container">
+        <nav class="pagination" role="navigation" aria-label="pagination">
+
+            <ul class="pagination-list">
+            </ul>
+
+        </nav>
+    </div>
+</body>
+<script src="js/pastgames.js"></script>
+
+</html>

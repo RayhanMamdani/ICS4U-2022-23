@@ -1,0 +1,131 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-item img {
+    max-height: 300px;
+    width: 66px;
+}
+
+nav.pagination{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+}
+
+.tableNumber {
+    text-align: center !important;
+}
+
+.gameCard {
+    min-height: 200px;
+    margin-top: 10%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameCard h1{
+    text-align: center;
+}
+
+.pagination-link a {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #F1F1FF;
+}
+
+.scoreText {
+    font-weight: bolder;
+    font-size: x-large;
+    padding: 3%;
+}
+
+.pagination-list{
+    margin: auto;
+    width: fit-content;
+    padding-top: 10%;
+}
+
+/* #warningAlert {
+    display: none;
+} */
+
+#dateFilter{
+    margin-top: 2%;
+    text-align: center;
+    padding: 1%;
+}
+
+#dateFilter h1{
+    font-size: x-large;
+    margin-bottom: 1%;
+}
+
+#filterButton{
+    margin: auto;
+    margin-top: 2%;
+    display: block;
+}
+
+#teamHeader{
+    padding-top: 2%;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.input{
+    max-width: 40%;
+    display: inline-block;
+}
+
+.shortName {
+    display: none;
+}
+
+#navbar label, #hamburger {
+    display: none;
+}
+
+.tableContainer{
+    text-align: center;
+}
+
+.tableContainer h1{
+    font-size: 40px;
+    padding: 3%;
+}
+
+.pagination-list {
+    padding-bottom: 5%;
+}
+
+
+@media(max-width: 1216px){
+    #containerTable{
+        flex-direction: column;
+    }
+
+    .tableContainer{
+        min-width: 90%;;
+    }
+
+    #eastTable, #westTable{
+        width: 100%;
+    }
+
+    .shortName{
+        display: table-cell;
+        text-align: center !important;
+    }
+
+    .longName{
+        display: none;
+    }
+}

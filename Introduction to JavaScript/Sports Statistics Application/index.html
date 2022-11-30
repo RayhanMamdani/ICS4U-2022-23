@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Standings</title>
+</head>
+
+<body>
+    <nav class="navbar has-background-grey-lighter" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="images/nbalogo.png">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="index.html">
+                    Standings
+                </a>
+
+                <a class="navbar-item" href="pastgames.html">
+                    Past Games
+                </a>
+
+                <a class="navbar-item" href="addgame.html">
+                    Add Game
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="containerTable" style="display: flex; justify-content: space-around;">
+        <div class="container tableContainer">
+            <h1 style="display: block;">Western Conference</h1>
+            <table class="table" id="westTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th><a onclick="sort('Name', 'west')">Team</a></th>
+                        <th class="longName"><a onclick="sort('Played',  'west')">Played</a></th>
+                        <th class="shortName"><a onclick="sort('Played',  'west')">GP</a></th>
+                        <th class="longName"><a onclick="sort('Wins', 'west')">Wins</a></th>
+                        <th class="shortName"><a onclick="sort('Wins', 'west')">W</a></th>
+                        <th class="longName"><a onclick="sort('Losses', 'west')">Losses</a></th>
+                        <th class="shortName"><a onclick="sort('Losses', 'west')">L</a></th>
+                        <th class="longName"><a onclick="sort('Pct', 'west')">Win %</a></th>
+                        <th class="shortName"><a onclick="sort('Pct', 'west')">%</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="container tableContainer">
+            <h1 style="display: block;">Eastern Conference</h1>
+            <table class="table" id="eastTable" style="justify-content: space-around">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th><a onclick="sort('Name', 'east')">Team</a></th>
+                        <th class="longName"><a onclick="sort('Played', 'east')">Played</a></th>
+                        <th class="shortName"><a onclick="sort('Played',  'east')">GP</a></th>
+                        <th class="longName"><a onclick="sort('Wins', 'east')">Wins</a></th>
+                        <th class="shortName"><a onclick="sort('Wins', 'east')">W</a></th>
+                        <th class="longName"><a onclick="sort('Losses', 'east')">Losses</a></th>
+                        <th class="shortName"><a onclick="sort('Losses', 'east')">L</a></th>
+                        <th class="longName"><a onclick="sort('Pct', 'east')">Win %</a></th>
+                        <th class="shortName"><a onclick="sort('Pct', 'east')">%</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+<script src="js/index.js"></script>
+
+</html>
