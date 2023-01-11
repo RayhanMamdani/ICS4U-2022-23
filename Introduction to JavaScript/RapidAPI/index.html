@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '7e42530531mshf5180b6e7bbd32dp108736jsnaa66f041c76e',
+            'X-RapidAPI-Host': 'fifa-2022-schedule-and-stats.p.rapidapi.com'
+        }
+    };
+
+    fetch('https://fifa-2022-schedule-and-stats.p.rapidapi.com/schedule?date=2022-11-22&utc_offset=8', options)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
+</script>
+
+</html>

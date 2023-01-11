@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Web Messaging Service</title>
+</head>
+
+<body>
+    <div class="container" style="text-align: center;">
+        <form action="get">
+            <h1>From:</h1>
+            <input type="text" placeholder="Twilio Number" id="fromNum">
+            <h1>To:</h1>
+            <input type="text" placeholder="Recipient Number" id="toNum">
+            <h1>Message:</h1>
+            <textarea type="text" id="msg"></textarea>
+            <button class="button" onclick="postMessage()">Submit</button>
+        </form>
+    </div>
+</body>
+<script>
+    function postMessage() {
+        let toNum = document.querySelector("#toNum");
+        let fromNum = document.querySelector("#fromNum");
+        let msg = document.querySelector("#msg");
+
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", "Basic QUM1NTZhZGExNTFkMDQ4N2U3ODIwZDFiNTQ5NTNjNDA1ODo5NmIyZTRlZjg2ODJmN2RkYjJjZTI3OThiY2NkMWEzMg==");
+        myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+
+        var urlencoded = new URLSearchParams();
+        urlencoded.append("To", toNum);
+        urlencoded.append("From", fromNum);
+        urlencoded.append("Body", msg);
+
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: urlencoded,
+            redirect: 'follow'
+        };
+
+        // fetch("https://api.twilio.com/2010-04-01/Accounts/AC556ada151d0487e7820d1b54953c4058/Messages.json", requestOptions)
+        //     .then(response => response.text())
+        //     .then(result => console.log(result))
+        //     .catch(error => console.log('error', error));
+    }
+</script>
+
+</html>
