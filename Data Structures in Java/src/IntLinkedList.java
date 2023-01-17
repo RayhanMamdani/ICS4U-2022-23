@@ -1,10 +1,25 @@
 public class IntLinkedList {
     private IntNode head;
+
     private int manyItems;
 
     public IntLinkedList() {
         this.head = null;
         this.manyItems = 0;
+    }
+
+    public Integer get(Integer index) {
+        if (isEmpty()) {
+            return null;
+        } else if (index > size() || index < 0) {
+            throw new IndexOutOfBoundsException("Invalid index");
+        } else {
+            IntNode curr = head;
+            for (int i = 0; i < index; i++) {
+                curr = curr.getLink();
+            }
+            return curr.getData();
+        }
     }
 
     public boolean add(Integer data) {
@@ -43,13 +58,15 @@ public class IntLinkedList {
                 curr = curr.getLink();
             }
             curr.setLink(new IntNode(data, curr.getLink()));
+            manyItems++;
         }
 
-        manyItems++;
         return true;
     }
 
     public Integer remove(Integer data) {
+        if (isEmpty())
+            return null;
         if (head != null && head.getData() == data) {
             head = head.getLink();
             manyItems--;
@@ -60,11 +77,24 @@ public class IntLinkedList {
                 curr = curr.getLink();
             if (curr.getLink() != null) {
                 curr.setLink(curr.getLink().getLink());
+                manyItems--;
                 return data;
             }
-            manyItems--;
+
         }
-        return 0;
+        return null;
+    }
+
+    public Integer removeFront() {
+        if (head == null)
+            return null;
+        else {
+            Integer temp = head.getData();
+            head = head.getLink();
+            manyItems--;
+            return temp;
+        }
+
     }
 
     public boolean isEmpty() {
