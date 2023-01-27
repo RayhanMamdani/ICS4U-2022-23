@@ -13,6 +13,14 @@ public class TestIntBST {
         bst.add(8);
         bst.add(7);
 
-        bst.preOrderPrintTraversal();
+        try {
+            bst.preOrderPrintTraversal();
+            bst.inOrderPrintTraversal();
+            bst.postOrderPrintTraversal();
+            System.out.println("Test Passed");
+        } catch (Exception e) {
+            System.out.println("Test Failed");
+        }
+
     }
 }
