@@ -34,14 +34,15 @@ public class IntBST {
             return root;
     }
 
-    private IntBSTNode findLargest(IntBSTNode root) {
-        if (root.getRightChild() != null && root.getRightChild().getRightChild() != null) {
-            return findLargest(root.getRightChild());
-        } else if (root.getRightChild() != null) {
-            return root.getRightChild();
-        }
-        return root;
-    }
+    // private IntBSTNode findLargest(IntBSTNode root) {
+    // if (root.getRightChild() != null && root.getRightChild().getRightChild() !=
+    // null) {
+    // return findLargest(root.getRightChild());
+    // } else if (root.getRightChild() != null) {
+    // return root.getRightChild();
+    // }
+    // return root;
+    // }
 
     public boolean remove(Integer val) {
         if (val == root.getValue()) {
@@ -55,7 +56,7 @@ public class IntBST {
                 root = root.getLeftChild();
                 return true;
             } else {
-                IntBSTNode biggest = findLargest(root.getLeftChild());
+                // IntBSTNode biggest = findLargest(root.getLeftChild());
                 root.setValue(root.getValue());
                 return remove(root.getLeftChild(), val);
             }
@@ -67,15 +68,16 @@ public class IntBST {
         return false;
     }
 
-    private IntBSTNode findParent(IntBSTNode child) {
-        if (child == root) {
-            return null;
-        } else if ((root.hasLeftChild() && root.getLeftChild() == child) || (root.hasRightChild()
-                && root.getRightChild() == child)) {
-            return root.getRightChild();
-        }
-        return null;
-    }
+    // private IntBSTNode findParent(IntBSTNode child) {
+    // if (child == root) {
+    // return null;
+    // } else if ((root.hasLeftChild() && root.getLeftChild() == child) ||
+    // (root.hasRightChild()
+    // && root.getRightChild() == child)) {
+    // return root.getRightChild();
+    // }
+    // return null;
+    // }
 
     public void preOrderPrintTraversal() {
         preOrderPrintTraversal(root);
